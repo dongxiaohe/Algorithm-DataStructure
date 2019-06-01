@@ -11,7 +11,5 @@ class Solution(object):
                 tmp_queue.append((first, last))
             queue = tmp_queue
             n >>= 1
-        result = []
-        for ch in str(tuple(queue)): # sigh, it has the space, otherwise it is much simpler.
-            if ch != ' ': result.append(ch)
-        return "".join(result)
+        return str(tuple(queue)).replace(' ', '')
+
